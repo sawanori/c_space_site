@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Segmentation from "@/components/Segmentation";
 import WhyUs from "@/components/WhyUs";
+import StaffVoice from "@/components/StaffVoice";
 import LatestWorks from "@/components/LatestWorks";
 import NewsBlog from "@/components/NewsBlog";
 import Footer from "@/components/Footer";
@@ -15,6 +16,7 @@ export default function Home() {
         <Hero />
         <Segmentation />
         <WhyUs />
+        <StaffVoice />
         <LatestWorks />
         <NewsBlog />
       </main>

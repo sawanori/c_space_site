@@ -1,0 +1,103 @@
+{
+    "project_name": "C-SPACE Website Improvement Plan",
+    "version": "2.0",
+    "objective": "Transform the site from a 'Digital Catalog' to a 'High-Performance Sales Tool'",
+    "target_audience": {
+        "primary": "Store Owners (B2B) & Home Renovation Seekers (B2C)",
+        "secondary": "Job Seekers & Business Partners"
+    },
+    "global_directives": {
+        "tone_and_manner": "Professional, Trustworthy, Human-centric, High-Precision",
+        "mobile_first": true,
+        "performance_goal": "Clarify USP (Unique Selling Proposition) and increase Micro-Conversions"
+    },
+    "tasks": [
+        {
+            "section_id": "hero_section",
+            "priority": "High",
+            "issue": "Copywriting is too generic and lacks concrete benefits.",
+            "action_items": [
+                {
+                    "element": "Main Copy",
+                    "instruction": "Keep existing but strengthen the sub-copy to highlight technical precision and cost-performance.",
+                    "content_update": {
+                        "main_text": "想いをカタチに、空間をチカラに。",
+                        "sub_text": "デザインの美しさと、1mmも妥協しない施工精度。\nその両立を、中間マージンカットの適正価格で実現します。"
+                    }
+                },
+                {
+                    "element": "Visuals",
+                    "instruction": "Ensure the background images cycle through the highest quality portfolio shots (High-end Restaurant -> Modern Office -> Warm House)."
+                }
+            ]
+        },
+        {
+            "section_id": "trust_and_humanity",
+            "priority": "High",
+            "issue": "Lack of human element creates a cold, corporate impression.",
+            "action_items": [
+                {
+                    "element": "New Component: Staff Voice",
+                    "placement": "Insert between 'Why C-SPACE' and 'Works' or within 'Why C-SPACE'.",
+                    "content_spec": {
+                        "title": "Our Craftsman Spirit",
+                        "description": "Show photos of the representative or key staff members.",
+                        "message": "「私たちは図面を引くだけではありません。現場の空気、素材の質感、そしてお客様の未来の成功までを設計します。」"
+                    }
+                }
+            ]
+        },
+        {
+            "section_id": "works_section",
+            "priority": "Medium",
+            "issue": "Portfolio items are just photos without context.",
+            "action_items": [
+                {
+                    "element": "Works Card",
+                    "instruction": "Add a 'Staff Comment' or 'Point' field to the detail view or hover state.",
+                    "data_structure_update": {
+                        "field": "staff_comment",
+                        "example_value": "「限られた坪数の中で席数を確保しつつ、お客様が窮屈に感じない動線設計にこだわりました。」"
+                    }
+                }
+            ]
+        },
+        {
+            "section_id": "cta_strategy",
+            "priority": "Critical",
+            "issue": "Single generic contact form creates a high barrier for entry.",
+            "action_items": [
+                {
+                    "element": "B2B Section (Store Design)",
+                    "instruction": "Add a secondary Micro-Conversion button.",
+                    "ui_component": {
+                        "type": "Secondary Button",
+                        "label": "店舗内装の概算見積もりシミュレーション",
+                        "style": "Outlined button, slightly smaller than main CTA"
+                    }
+                },
+                {
+                    "element": "B2C Section (Renovation)",
+                    "instruction": "Add a secondary Micro-Conversion button.",
+                    "ui_component": {
+                        "type": "Secondary Button",
+                        "label": "リノベ相談会・資料請求はこちら",
+                        "style": "Outlined button, softer color"
+                    }
+                }
+            ]
+        },
+        {
+            "section_id": "content_marketing",
+            "priority": "Medium",
+            "issue": "Journal articles and Works are disconnected.",
+            "action_items": [
+                {
+                    "element": "Internal Linking",
+                    "instruction": "Create a bidirectional link structure.",
+                    "logic": "If a Journal article talks about 'Lighting', automatically suggest 'Works' tagged with 'Lighting' at the bottom of the article."
+                }
+            ]
+        }
+    ]
+}

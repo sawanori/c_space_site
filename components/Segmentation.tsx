@@ -11,6 +11,8 @@ const cards = [
     description: "繁盛店を創るための動線設計とデザイン。\n予算に合わせた最適なプランをご提案。",
     image: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80",
     href: "#shop",
+    cta_label: "店舗内装の概算見積もりシミュレーション",
+    cta_sub: "最短30秒で完了"
   },
   {
     target: "B2C / For Living",
@@ -18,6 +20,8 @@ const cards = [
     description: "ライフスタイルに合わせた理想の住まい。\n一貫体制だからできる納得の品質。",
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
     href: "#home",
+    cta_label: "リノベ相談会・資料請求はこちら",
+    cta_sub: "無料プラン作成も受付中"
   },
   {
     target: "Asset / Management",
@@ -25,6 +29,8 @@ const cards = [
     description: "新しいつながりを生む\n安心・安全なシェアハウス「COUVERTURE」",
     image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80",
     href: "#couverture",
+    cta_label: "運営委託・空室対策のご相談",
+    cta_sub: "オーナー様向け"
   },
 ];
 
@@ -55,8 +61,9 @@ export default function Segmentation() {
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
         >
           {cards.map((card, index) => (
-            <motion.div key={index} variants={fadeUpVariant}>
-              <Link href={card.href} className="group block relative h-[500px] w-full overflow-hidden rounded-sm">
+            <motion.div key={index} variants={fadeUpVariant} className="group flex flex-col h-full">
+              {/* Main Card Link */}
+              <Link href={card.href} className="block relative h-[400px] w-full overflow-hidden rounded-t-sm">
                 {/* Background Image */}
                 <div
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
@@ -69,7 +76,7 @@ export default function Segmentation() {
 
                 {/* Content */}
                 <div className="absolute inset-0 p-8 flex flex-col justify-end text-white">
-                  <div className="transform transition-transform duration-500 group-hover:-translate-y-4">
+                  <div className="transform transition-transform duration-500 group-hover:-translate-y-2">
                     <span className="inline-block px-3 py-1 bg-[var(--color-gold)] text-[var(--color-navy-dark)] text-xs font-bold tracking-wider mb-4">
                       {card.target}
                     </span>
@@ -88,6 +95,16 @@ export default function Segmentation() {
                   </div>
                 </div>
               </Link>
+
+              {/* Secondary CTA Button (Micro-Conversion) */}
+              <div className="bg-white border-x border-b border-gray-100 p-6 rounded-b-sm flex-1 flex flex-col justify-center">
+                <Link href={card.href} className="block w-full py-3 px-4 rounded border border-[var(--color-navy)] text-[var(--color-navy)] text-sm font-bold text-center hover:bg-[var(--color-navy)] hover:text-white transition-all duration-300">
+                  {card.cta_label}
+                </Link>
+                <p className="text-center text-xs text-gray-400 mt-2 font-medium">
+                  {card.cta_sub}
+                </p>
+              </div>
             </motion.div>
           ))}
         </motion.div>

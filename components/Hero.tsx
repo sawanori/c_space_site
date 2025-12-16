@@ -54,8 +54,8 @@ export default function Hero() {
             variants={fadeUpVariant}
             className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-12 max-w-3xl mx-auto leading-relaxed tracking-wide font-light drop-shadow-md"
           >
-            店舗・住宅のデザインから施工まで。<br className="hidden sm:block" />
-            理想の空間を叶える、ワンストップ・ソリューション。
+            デザインの美しさと、1mmも妥協しない施工精度。<br className="hidden sm:block" />
+            その両立を、プロの創意工夫による『納得の適正価格』で実現します。
           </motion.p>
 
           {/* CTA Buttons */}
