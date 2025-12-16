@@ -1,0 +1,158 @@
+project_spec:
+  project_name: "株式会社シー・スペース Webサイトリニューアル TOPページ構成案"
+  client: "株式会社シー・スペース (C-SPACE Co.,Ltd.)"
+  version: "1.0"
+  date: "2025-12-16"
+  
+  # デザイン全体の方向性と戦略
+  global_concept:
+    theme: "Trust & Sophistication (信頼と洗練)"
+    keywords:
+      - "Professional (プロフェッショナル)"
+      - "Modern (現代的)"
+      - "User-Centric (ユーザー中心)"
+    target_audience:
+      primary: "店舗出店・改装を検討中のオーナー (B2B)"
+      secondary: "こだわりのリノベーションを求める個人 (B2C)"
+      tertiary: "シェアハウス入居希望者・不動産投資家"
+    ui_ux_policy:
+      - "Mobile First: スマートフォンでの操作性を最優先"
+      - "Segmentation: 訪問者の目的（店舗/住宅/シェアハウス）に応じた即時の振り分け"
+      - "Conversion Focus: 常に問い合わせへの導線を確保"
+
+  # 画面構成要素 (上から順)
+  sections:
+    
+    # 1. ヘッダーエリア
+    - section_id: "header"
+      layout: "Fixed Top (追従型)"
+      elements:
+        logo:
+          position: "Left"
+          instruction: "視認性を高めるため、現状よりサイズを大きく表示"
+        navigation_pc:
+          items: ["事業紹介", "施工実績", "COUVERTURE", "会社概要", "採用情報"]
+        contact_info_pc:
+          phone: "03-6777-6563"
+          text: "平日 9:00-18:00"
+        cta_button:
+          text: "お問い合わせ・無料見積もり"
+          color: "Accent Color (Gold or Navy)"
+          style: "Solid, High Contrast"
+        mobile_menu:
+          type: "Hamburger"
+          elements: "電話アイコン（タップで発信）をヘッダー内に常設"
+
+    # 2. ファーストビュー (Hero Area)
+    - section_id: "hero_area"
+      marketing_intent: "3秒以内に『何の会社か』『どんな利益があるか』を伝え、離脱を防ぐ"
+      visual:
+        type: "Full Screen Slider / Video"
+        content: "『人が空間で快適に過ごしている』シーンを想起させる高品質な施工写真（店舗・住宅・シェアハウスのMix）"
+        overlay: "文字の可読性を確保するための薄いダークフィルター"
+      copywriting:
+        main: "想いをカタチに、空間をチカラに。"
+        sub: "店舗・住宅のデザインから施工まで。理想の空間を叶える、ワンストップ・ソリューション。"
+      cta_buttons:
+        primary:
+          text: "施工実績を見る"
+          action: "Scroll to Works or Link to Archive"
+        secondary:
+          text: "事業内容について"
+          style: "Outline / Ghost Button"
+
+    # 3. 事業セグメンテーション (Entry Points)
+    - section_id: "segmentation"
+      marketing_intent: "ユーザーを属性（B2B/B2C）ごとに適切なLPへ誘導し、ミスマッチを減らす"
+      layout: "3 Columns Card (Mobile: Vertical Stack)"
+      cards:
+        - target: "店舗オーナー向け"
+          image: "High-quality Shop Interior"
+          title: "店舗の設計・デザイン・施工"
+          description: "繁盛店を創るための動線設計とデザイン。予算に合わせた最適なプランをご提案。"
+          link_text: "店舗づくりについて ＞"
+        
+        - target: "個人住宅向け"
+          image: "Modern Living Room"
+          title: "住宅リフォーム・リノベーション"
+          description: "ライフスタイルに合わせた理想の住まい。一貫体制だからできる納得の価格と品質。"
+          link_text: "住まいづくりについて ＞"
+        
+        - target: "シェアハウス"
+          image: "Sharehouse Common Area"
+          title: "シェアハウス「COUVERTURE」"
+          description: "新しいつながりを生む、安心・安全なシェアハウスの企画・運営・管理。"
+          link_text: "専用サイトを見る ＞"
+      
+      sub_links:
+        - text: "建物メンテナンス・大規模修繕はこちら ＞"
+          style: "Text Link, Less prominence"
+
+    # 4. 選ばれる理由 (USP)
+    - section_id: "why_us"
+      marketing_intent: "競合他社との差別化要素を明確にし、信頼感を醸成する"
+      layout: "Icon + Text (3 Columns)"
+      points:
+        - title: "完全一貫体制"
+          icon: "Handshake/Cycle"
+          desc: "設計から施工まで自社完結。中間マージンをカットし、高精度な施工を実現。"
+        - title: "提案力と実績"
+          icon: "Lightbulb/Design"
+          desc: "多様な業態での実績に基づき、イメージを具体的なカタチにご提案。"
+        - title: "運営・管理サポート"
+          icon: "Support/Shield"
+          desc: "引き渡し後も安心。メンテナンスや運営管理まで末永くサポート。"
+
+    # 5. 施工実績 (Works)
+    - section_id: "latest_works"
+      marketing_intent: "ビジュアルでクオリティを証明し、『自分の店/家もこうしたい』という欲望を喚起する"
+      functionality: "Category Filter Tabs (All, Shop, Home, Office)"
+      layout: "Grid"
+      item_structure:
+        - Thumbnail Image
+        - Category Label (e.g., 飲食店)
+        - Title (e.g., 〇〇様 新装工事)
+        - Catchphrase (e.g., 素材感を活かした空間)
+      footer_link: "施工実績一覧を見る（条件検索）"
+
+    # 6. ニュース＆ブログ
+    - section_id: "news_blog"
+      layout: "Split View (Left: News, Right: Blog)"
+      content:
+        news: "会社からのお知らせ、休業情報など"
+        blog: "施工の裏側、デザインのポイント、スタッフ紹介など（コンテンツSEO対策）"
+
+    # 7. フッター & コンバージョンエリア
+    - section_id: "footer_cv"
+      background: "Dark/Trustworthy Color"
+      elements:
+        - message: "空間づくりに関するご相談・お見積りは無料です。"
+        - phone_large: "03-6777-6563"
+        - button_large: "Webからのお問い合わせ・見積もり依頼"
+        - sitemap_links: "全ページへのリンク網羅"
+        - copyright: "© C-SPACE Co.,Ltd."
+
+  # モバイル専用UI (重要)
+  mobile_specifics:
+    fixed_footer:
+      enabled: true
+      marketing_intent: "スマホユーザーの機会損失をゼロにするための常時表示ボタン"
+      layout: "Split 50/50"
+      buttons:
+        left:
+          type: "Phone"
+          label: "電話で相談"
+          action: "tel:0367776563"
+          color: "Secondary Brand Color"
+        right:
+          type: "Email/Form"
+          label: "Webでお問い合わせ"
+          action: "Link to Contact Form"
+          color: "Primary Accent Color"
+
+  # 技術要件メモ
+  technical_requirements:
+    - "Responsive Design (Breakpoints: Mobile < 768px, Tablet < 1024px)"
+    - "Images: WebP format for performance"
+    - "SEO: Semantic HTML5 tags (header, nav, main, section, footer)"
+    - "Loading Speed: Fast LCP (Largest Contentful Paint) for Hero Area"
